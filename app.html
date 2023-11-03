@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<style>
+
+
+.input-field::placeholder {
+    transition: all 0.2s ease-in-out;
+}
+
+.input-field:focus::placeholder {
+    font-size: 0.8em; /* Reduce the placeholder font size to match the input field */
+    vertical-align: super; /* Make it appear as a superscript */
+    transform: translateY(-6px); /* Move the placeholder up slightly */
+}
+</style>
+<body>
+    <h1>HTML Page with Two Input Fields</h1>
+
+    <div class="group">
+        <input class="input-field" type="text" id="input1" name="input1" onkeydown="return onlyNum(event)" placeholder="00.00">
+        <select id='drop1' class="dropdown">
+            <option value="1">INR</option>
+            <option value="82.5">USD</option>
+        </select>
+    </div>
+
+    <br>
+
+    <div class="group">
+        <input class="input-field" type="text" id="input2" name="input2" onkeydown="return onlyNum(event)" placeholder="00.00">
+        <select id="drop2" class="dropdown">
+            <option value="1">INR</option>
+            <option value="82.5">USD</option>
+        </select>
+    </div>
+    
+
+    <div class="group">
+        <button id="confirm" name="confirm" onclick="Convert()"> Convert</button>
+    </div>
+</body>
+</html>
